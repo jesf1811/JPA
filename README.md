@@ -2,22 +2,35 @@
 
 Tables:
 1) login:
-    Id:
+
+    id
+    
     password
+    
     active/inactive
     
-2) userDetails
+2) userDetails:
+
     id
+    
     loginId
+    
     name
+    
     add
+    
     contactno
+    
     type: admin/user
     
-3) permission
+3) permission:
+
     id
+    
     userid
+    
     permissionlevel: 1,2,3,4,5
+    
 
 
 Write entity class for them and find. insert delete, using JPA methods
