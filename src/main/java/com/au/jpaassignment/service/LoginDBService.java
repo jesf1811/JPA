@@ -45,4 +45,19 @@ public class LoginDBService {
         }
         return oldLogin;
     }
+
+    public List<Login> getLoginsQuery(){
+        return loginRepository.getLoginQuery();
+    }
+
+    public Login createLoginQuery(Login login){
+        return loginRepository.createLoginQuery(login.getId(),login.getActive(),login.getPassword());
+    }
+
+    public String deleteLoginQuery(int loginId){
+        loginRepository.deleteLoginQuery(loginId);
+        return "Login successfully deleted";
+    }
+
+
 }

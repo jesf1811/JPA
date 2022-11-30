@@ -3,14 +3,14 @@ package com.au.jpaassignment.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="Permissions")
+@Table(name="permissions")
 public class Permission {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @OneToOne
     @JoinColumn(name="user_id",referencedColumnName = "id")
-    @OneToOne(cascade = CascadeType.ALL)
     private User user;
 
     @Column(name = "permission_level")

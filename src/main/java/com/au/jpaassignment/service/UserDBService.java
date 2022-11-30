@@ -47,4 +47,17 @@ public class UserDBService {
         }
         return oldUser;
     }
+
+    public List<User> getUsersQuery(){
+        return userRepository.findAllUsers();
+    }
+
+    public User createUserQuery(User user){
+        return userRepository.createUser(user.getId(),user.getAddress(),user.getContactNo(),user.getName(),user.getType(),user.getLogin());
+    }
+
+    public String deleteUserQuery(int userId){
+        userRepository.deleteUser(userId);
+        return "User successfully deleted";
+    }
 }

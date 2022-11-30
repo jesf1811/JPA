@@ -3,14 +3,15 @@ package com.au.jpaassignment.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Users")
+@Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
     private int id;
 
+    @OneToOne
     @JoinColumn(name="login_id",referencedColumnName = "id")
-    @OneToOne(cascade = CascadeType.ALL)
     private Login login;
 
     @Column
@@ -20,12 +21,12 @@ public class User {
     private String address;
 
     @Column(name="contact_number")
-    private int contactNo;
+    private String contactNo;
 
     @Column
     private String type;
 
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+    @OneToOne(mappedBy = "user")
     private Permission permission;
 
     public Permission getPermission() {
@@ -68,11 +69,11 @@ public class User {
         this.address = address;
     }
 
-    public int getContactNo() {
+    public String getContactNo() {
         return contactNo;
     }
 
-    public void setContactNo(int contactNo) {
+    public void setContactNo(String contactNo) {
         this.contactNo = contactNo;
     }
 
