@@ -45,16 +45,16 @@ public class PermissionDBService {
         return oldPermission;
     }
 
-    public List<Permission> getPermissionQuery(){
-        return permissionRepository.getPermissionQuery();
-    }
-
-    public Permission createPermissionQuery(Permission permission){
-        return permissionRepository.createPermissionQuery(permission.getId(),permission.getPermissionLevel(),permission.getUser());
-    }
-
-    public String deletePermissionQuery(int permissionId){
-        permissionRepository.deletePermissionQuery(permissionId);
-        return "Permission successfully deleted";
-    }
+//    public List<Permission> getPermissionQuery(){
+//        return permissionRepository.getPermissionQuery();
+//    }
+//
+//    public Permission createPermissionQuery(Permission permission){
+//        return permissionRepository.createPermissionQuery(permission.getId(),permission.getPermissionLevel(),permission.getUser());
+//    }
+//
+//    public String deletePermissionQuery(int permissionId){
+//        permissionRepository.deletePermissionQuery(permissionId);
+//        return "Permission successfully deleted";
+//    }
 }

@@ -38,18 +38,18 @@ public class PermissionController {
         return permissionDBService.updatePermission(permission);
     }
 
-    @GetMapping("/query/permissions")
-    public List<Permission> getPermissionsQuery(){
-        return permissionDBService.getPermissionQuery();
-    }
-
-    @PostMapping("/query/createPermission")
-    public Permission createPermissionQuery(@RequestBody Permission permission){
-        return permissionDBService.createPermissionQuery(permission);
-    }
-
-    @DeleteMapping("/query/permissions/{permissionId}")
-    public String deletePermissionQuery(@PathVariable int permissionId){
-        return permissionDBService.deletePermissionQuery(permissionId);
-    }
+//    @GetMapping("/query/permissions")
+//    public List<Permission> getPermissionsQuery(){
+//        return permissionDBService.getPermissionQuery();
+//    }
+//
+//    @PostMapping("/query/createPermission")
+//    public Permission createPermissionQuery(@RequestBody Permission permission){
+//        return permissionDBService.createPermissionQuery(permission);
+//    }
+//
+//    @DeleteMapping("/query/permissions/{permissionId}")
+//    public String deletePermissionQuery(@PathVariable int permissionId){
+//        return permissionDBService.deletePermissionQuery(permissionId);
+//    }
 }

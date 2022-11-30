@@ -14,17 +14,17 @@ import java.util.List;
 @Repository
 @EnableJpaRepositories
 public interface LoginRepository extends JpaRepository<Login,Integer> {
-    @Query("SELECT l from logins l")
-    public List<Login> getLoginQuery();
-
-    @Transactional
-    @Modifying
-    @Query(value="INSERT INTO logins (id,is_active,password) VALUES (:id,:is_active,:password)",nativeQuery = true)
-    Login createLoginQuery(@Param("id") int loginId, @Param("is_active") boolean is_active, @Param("password") String password);
-
-    @Transactional
-    @Modifying
-    @Query(value="DELETE FROM logins l WHERE l.id=id")
-    void deleteLoginQuery(@Param("id") int loginId);
+//    @Query("SELECT l from logins l")
+//    public List<Login> getLoginQuery();
+//
+//    @Transactional
+//    @Modifying
+//    @Query(value="INSERT INTO logins (id,is_active,password) VALUES (:id,:is_active,:password)",nativeQuery = true)
+//    Login createLoginQuery(@Param("id") int loginId, @Param("is_active") boolean is_active, @Param("password") String password);
+//
+//    @Transactional
+//    @Modifying
+//    @Query(value="DELETE FROM logins l WHERE l.id=id")
+//    void deleteLoginQuery(@Param("id") int loginId);
 
 }

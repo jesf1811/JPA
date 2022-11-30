@@ -40,18 +40,18 @@ public class LoginController {
         return loginDBService.updateLogin(login);
     }
 
-    @GetMapping("/query/logins")
-    public List<Login> getLoginsQuery(){
-        return loginDBService.getLoginsQuery();
-    }
-
-    @PostMapping("/query/createLogin")
-    public Login createLoginQuery(@RequestBody Login login){
-        return loginDBService.createLoginQuery(login);
-    }
-
-    @DeleteMapping("/query/logins/{loginId}")
-    public String deleteLoginQuery(@PathVariable int loginId){
-        return loginDBService.deleteLoginQuery(loginId);
-    }
+//    @GetMapping("/query/logins")
+//    public List<Login> getLoginsQuery(){
+//        return loginDBService.getLoginsQuery();
+//    }
+//
+//    @PostMapping("/query/createLogin")
+//    public Login createLoginQuery(@RequestBody Login login){
+//        return loginDBService.createLoginQuery(login);
+//    }
+//
+//    @DeleteMapping("/query/logins/{loginId}")
+//    public String deleteLoginQuery(@PathVariable int loginId){
+//        return loginDBService.deleteLoginQuery(loginId);
+//    }
 }

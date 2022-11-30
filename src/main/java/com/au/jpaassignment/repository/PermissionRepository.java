@@ -17,16 +17,16 @@ import java.util.List;
 @Repository
 public interface PermissionRepository extends JpaRepository<Permission,Integer> {
 
-    @Query("SELECT p FROM permissions p")
-    List<Permission> getPermissionQuery();
-
-    @Transactional
-    @Modifying
-    @Query(value = "INSERT INTO permissions (id,permission_level,user_id) VALUES (:permissionId,:permission_level,:user)", nativeQuery = true)
-    Permission createPermissionQuery(@Param("permissionId") int permissionId, @Param("permission_level") int permissionLevel, @Param("user")User user);
-
-    @Transactional
-    @Modifying
-    @Query("DELECT FROM permissions p WHERE p.id=id")
-    void deletePermissionQuery(@Param("id") int permissionId);
+//    @Query("SELECT p FROM permissions p")
+//    List<Permission> getPermissionQuery();
+//
+//    @Transactional
+//    @Modifying
+//    @Query(value = "INSERT INTO permissions (id,permission_level,user_id) VALUES (:permissionId,:permission_level,:user)", nativeQuery = true)
+//    Permission createPermissionQuery(@Param("permissionId") int permissionId, @Param("permission_level") int permissionLevel, @Param("user")User user);
+//
+//    @Transactional
+//    @Modifying
+//    @Query("DELECT FROM permissions p WHERE p.id=id")
+//    void deletePermissionQuery(@Param("id") int permissionId);
 }

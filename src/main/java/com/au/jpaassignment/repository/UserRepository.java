@@ -15,16 +15,16 @@ import java.util.List;
 @Repository
 @EnableJpaRepositories
 public interface UserRepository extends JpaRepository<User,Integer> {
-    @Query("SELECT u FROM users u")
-    List<User> findAllUsers();
-
-    @Transactional
-    @Modifying
-    @Query(value = "INSERT INTO users (id,address,contact_number,name,type,login_id) VALUES (:id,:address,:contactNo,:name,:type,:login)",nativeQuery = true)
-    User createUser(@Param("id") int id, @Param("address") String address, @Param("contactNo") String contactNo, @Param("name") String name, @Param("type") String type, @Param("login") Login login);
-
-    @Transactional
-    @Modifying
-    @Query("DELETE FROM users u WHERE u.id=:id")
-    void deleteUser(@Param("id") int userId);
+//    @Query("SELECT u FROM users u")
+//    List<User> findAllUsers();
+//
+//    @Transactional
+//    @Modifying
+//    @Query(value = "INSERT INTO users (id,address,contact_number,name,type,login_id) VALUES (:id,:address,:contactNo,:name,:type,:login)",nativeQuery = true)
+//    User createUser(@Param("id") int id, @Param("address") String address, @Param("contactNo") String contactNo, @Param("name") String name, @Param("type") String type, @Param("login") Login login);
+//
+//    @Transactional
+//    @Modifying
+//    @Query("DELETE FROM users u WHERE u.id=:id")
+//    void deleteUser(@Param("id") int userId);
 }

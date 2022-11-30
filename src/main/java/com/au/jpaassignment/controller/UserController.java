@@ -38,18 +38,18 @@ public class UserController {
         return userDBService.updateUser(user);
     }
 
-    @GetMapping("/query/users")
-    public List<User> getUsersQuery(){
-        return userDBService.getUsersQuery();
-    }
-
-    @PostMapping("/query/createUser")
-    public User createUserQuery(@RequestBody User user){
-        return userDBService.createUserQuery(user);
-    }
-
-    @DeleteMapping("/query/users/{userId}")
-    public String deleteUserQuery(@PathVariable int userId){
-        return userDBService.deleteUserQuery(userId);
-    }
+//    @GetMapping("/query/users")
+//    public List<User> getUsersQuery(){
+//        return userDBService.getUsersQuery();
+//    }
+//
+//    @PostMapping("/query/createUser")
+//    public User createUserQuery(@RequestBody User user){
+//        return userDBService.createUserQuery(user);
+//    }
+//
+//    @DeleteMapping("/query/users/{userId}")
+//    public String deleteUserQuery(@PathVariable int userId){
+//        return userDBService.deleteUserQuery(userId);
+//    }
 }
