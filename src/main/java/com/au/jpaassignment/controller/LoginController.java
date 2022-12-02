@@ -25,7 +25,7 @@ public class LoginController {
         return new ResponseEntity<>(loginDBService.getLoginById(loginId),HttpStatus.OK);
     }
 
-    @PostMapping("/createLogin")
+    @PostMapping("/logins")
     public Login createLogin(@RequestBody Login login){
         return loginDBService.createLogin(login);
     }
@@ -35,8 +35,8 @@ public class LoginController {
         return loginDBService.deleteLoginById(loginId);
     }
 
-    @PutMapping("/updateLogin")
-    public Login updateLogin(Login login){
+    @PutMapping("/logins")
+    public Login updateLogin(@RequestBody Login login){
         return loginDBService.updateLogin(login);
     }
 

@@ -23,7 +23,7 @@ public class PermissionController {
         return permissionDBService.getPermissionById(permissionId);
     }
 
-    @PostMapping("/createPermission")
+    @PostMapping("/permissions")
     public Permission createPermission(@RequestBody Permission permission){
         return permissionDBService.createPermission(permission);
     }
@@ -33,7 +33,7 @@ public class PermissionController {
         return permissionDBService.deletePermissionById(permissionId);
     }
 
-    @PutMapping("/updatePermission")
+    @PutMapping("/permissions")
     public Permission updatePermission(@RequestBody Permission permission){
         return permissionDBService.updatePermission(permission);
     }

@@ -10,7 +10,7 @@ public class User {
     @Column
     private int id;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="login_id",referencedColumnName = "id")
     private Login login;
 
