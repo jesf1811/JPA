@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class JpaAssignmentApplication {
-
+	// Hakuna Matata
 	/**
 	 * Here is some new comments
 	 * @param args command line arguments
